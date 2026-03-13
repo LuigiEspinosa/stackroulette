@@ -1,6 +1,6 @@
 # stackroulette
 
-### ⚙🚀[https://stackroulette.dev](https://stackroulette.dev)
+- Original Project: [https://stackroulette.dev](https://stackroulette.dev)
 
 StackRoulette is a mini-project that was born from an idea after reading yet another post saying that Node.js had to be used with MongoDB, and PHP with MySQL, and that there is only React, Angular and Vue for building webapps ...
 
@@ -16,26 +16,26 @@ Any improvement is also appreciated.
 
 ## Project setup
 
-```
-npm install
+```bash
+pnpm install
 ```
 
 ### Compiles and hot-reloads for development
 
-```
-npm run serve
+```bash
+pnpm dev
 ```
 
 ### Compiles and minifies for production
 
-```
-npm run build
+```bash
+pnpm build
 ```
 
 ### Lints and fixes files
 
-```
-npm run lint
+```bash
+pnpm lint
 ```
 
 ### Customize configuration
