@@ -54,7 +54,7 @@
                     change('backend_environment', BACKEND_ENVIRONMENTS, () => {
                       change(
                         'backend_framework',
-                        backend_environment.frameworks
+                        backend_environment.frameworks,
                       );
                     });
                   }
@@ -91,7 +91,7 @@
 </template>
 
 <script>
-import StackItem from '@/components/StackItem.vue';
+import StackItem from '../components/StackItem.vue';
 import { sample as _sample } from 'lodash';
 import {
   JS_FRAMEWORKS,
@@ -99,18 +99,16 @@ import {
   CSS_FRAMEWORKS,
   CSS_PREPROCESSORS,
   SGBD,
-  BACKEND_ENVIRONMENTS
-} from '@/stacks.js';
+  BACKEND_ENVIRONMENTS,
+} from '../stacks.js';
 
 export default {
   name: 'Home',
   components: {
-    StackItem
+    StackItem,
   },
   data() {
     return {
-      confettimer: null,
-
       JS_FRAMEWORKS,
       JS_PREPROCESSORS,
       CSS_FRAMEWORKS,
@@ -124,7 +122,7 @@ export default {
       cssPreprocessor: null,
       sgbd: null,
       backend_environment: null,
-      backend_framework: null
+      backend_framework: null,
     };
   },
   methods: {
@@ -153,7 +151,7 @@ export default {
         this.backend_environment = _sample(BACKEND_ENVIRONMENTS);
         this.backend_framework = _sample(this.backend_environment.frameworks);
       }, 250);
-    }
+    },
   },
   computed: {
     generated() {
@@ -166,23 +164,11 @@ export default {
         this.backend_environment !== null ||
         this.backend_framework !== null
       );
-    }
+    },
   },
   mounted() {
     this.generateStack();
-    if (this.$confetti.canvas && this.$confetti.canvas.clear) {
-      this.$confetti.canvas.clear();
-      this.$confetti.stop();
-      if (this.$confetti.animationId) {
-        cancelAnimationFrame(this.$confetti.animationId);
-      }
-    }
-    this.$confetti.setDefaults();
-    this.$confetti.start({ particlesPerFrame: 1 });
-    setTimeout(() => {
-      this.$confetti.stop();
-    }, 2000);
-  }
+  },
 };
 </script>
 

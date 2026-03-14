@@ -7,7 +7,7 @@
         target="_blank"
         :title="`Visit ${item.name}'s website`"
       >
-        <img :src="getIcon(item.icon)" :alt="item.name" />
+        <!-- <img :src="getIcon(item.icon)" :alt="item.name" /> -->
         <h2 :style="`background-color: ${color};`">{{ item.name }}</h2>
       </a>
       <div class="dont-like">
@@ -24,35 +24,28 @@
 </template>
 
 <script>
-import splashy from 'splashy';
-
 export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     item: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   name: 'stack-item',
   data() {
     return {
-      color: '#000000'
+      color: '#000000',
     };
   },
   methods: {
-    getIcon(pic) {
-      let imageBody = require(`../assets/icons/${pic}`);
-
-      splashy(imageBody).then(
-        ([dominantColor]) => (this.color = dominantColor)
-      );
-
-      return imageBody;
-    }
-  }
+    // getIcon(pic) {
+    //   let imageBody = require(`../assets/icons/${pic}`);
+    //   return imageBody;
+    // },
+  },
 };
 </script>
 

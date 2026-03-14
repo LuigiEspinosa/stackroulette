@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="hero-background"></div>
+    <div class="hero-background" />
 
     <nav>
       <router-link to="/about" class="btn btn-primary text-light">

@@ -1,9 +1,7 @@
 <template>
   <div class="about">
     <div class="text-center">
-      <h2 class="sub-title mt-0">
-        About StackRoulette
-      </h2>
+      <h2 class="sub-title mt-0">About StackRoulette</h2>
       <p>
         This mini-project was born from an idea after reading yet another post
         saying that Node.js had to be used with MongoDB, and PHP with MySQL, and
@@ -34,9 +32,7 @@
       </p>
       <hr />
       <div class="d-flex flex-wrap justify-content-center align-items-center">
-        <div class="m-3">
-          © Copyright 2020 - Jean-Marie CLÉRY
-        </div>
+        <div class="m-3">© Copyright 2020 - Jean-Marie CLÉRY</div>
         <div class="m-3">
           <img
             src="../assets/github.svg"
