@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref, nextTick, onMounted } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 import { sample as _sample } from 'lodash';
 import confetti from 'canvas-confetti';
 import WebStack from '../components/wrappers/WebStack.vue';
@@ -9,9 +10,13 @@ const STACK_TYPES = {
   web: WebStack,
 };
 
+const router = useRouter();
+const route = useRoute();
+
 const stackType = ref(null);
 const lockedItems = ref({});
 const stackRef = ref(null);
+const linkCopied = ref(null);
 
 const currentStackComponent = computed(() =>
   stackType.value ? STACK_TYPES[stackType.value] : null,
@@ -27,18 +32,45 @@ function toggleLock(key) {
   }
 }
 
+async function updateURL() {
+  const params = (await stackRef.value?.getURLParams?.()) ?? {};
+  router.replace({ query: { t: stackType.value, ...params } }).catch(() => {});
+}
+
 async function generateStack() {
   stackType.value = null;
   await nextTick();
   stackType.value = _sample(Object.keys(STACK_TYPES));
   await nextTick();
-  stackRef.value?.generateStack();
+
+  if (stackRef.value) {
+    await stackRef.value?.generateStack();
+  }
+
+  await updateURL();
+}
+
+async function restoreFromURL() {
+  const q = route.query;
+  if (!q.t || !STACK_TYPES[q.t]) return false;
+  stackType.value = q.t;
+  await nextTick();
+  stackRef.value?.restoreFromURL(q);
+  return true;
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href);
+  linkCopied.value = true;
+  setTimeout(() => {
+    linkCopied.value = false;
+  }, 2000);
 }
 
 defineExpose({ generateStack });
 
 onMounted(async () => {
-  generateStack();
+  if (!(await restoreFromURL())) generateStack();
 
   const end = Date.now() + 2000;
   const frame = () => {
@@ -71,6 +103,13 @@ onMounted(async () => {
       <button id="roll" class="btn btn-primary" @click="generateStack">
         👎 Don't like it? <strong>Generate another one!</strong>
       </button>
+      <button
+        v-if="stackType"
+        class="btn btn-link btn-copy-link"
+        @click="copyLink"
+      >
+        {{ linkCopied ? '✓ Copied!' : '🔗 Copy Link' }}
+      </button>
     </div>
 
     <main>
@@ -79,6 +118,7 @@ onMounted(async () => {
           :is="currentStackComponent"
           ref="stackRef"
           :locked-items="lockedItems"
+          @update="updateURL"
           @lock="toggleLock"
         />
       </div>
@@ -94,9 +134,17 @@ onMounted(async () => {
   transform: scale(0.9);
 }
 
+.btn-copy-link {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  color: #6cbeff;
+  padding: 0.25rem 0.5rem;
+}
+
 .stack-row {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .stack {
@@ -122,6 +170,7 @@ onMounted(async () => {
   display: flex;
   justify-content: space-evenly;
   align-items: stretch;
+  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 76px) {

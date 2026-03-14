@@ -113,6 +113,7 @@ function getIcon(pic) {
   position: relative;
   z-index: 1;
   margin: 0.35rem;
+  min-width: 180px;
 
   h1 {
     font-weight: 300;
@@ -124,8 +125,6 @@ function getIcon(pic) {
     margin-bottom: 2rem;
 
     .lock-btn {
-      top: 0.04rem;
-      margin-left: 0.3rem;
       background: none;
       border: none;
       cursor: pointer;

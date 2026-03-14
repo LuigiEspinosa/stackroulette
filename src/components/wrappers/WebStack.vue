@@ -1,35 +1,30 @@
 <script setup>
-import { ref } from 'vue';
+import { toRef } from 'vue';
 import FrontendStack from '../stacks/FrontendStack.vue';
+import DatabaseStack from '../stacks/DatabaseStack.vue';
+import { useWebStack } from '../../composables/useWebStack';
 
-defineProps({ lockedItems: { type: Object, required: true } });
+const props = defineProps({ lockedItems: { type: Object, required: true } });
 
-defineEmits(['lock']);
+const emit = defineEmits(['lock', 'update']);
 
-const STACK_SECTIONS = [{ name: 'frontend', component: FrontendStack }];
+const { items, generateStack, change, getURLParams, restoreFromURL } =
+  useWebStack(toRef(props, 'lockedItems'), () => emit('update'));
 
-const stackRefs = ref({});
-
-function setStackRef(name) {
-  return (el) => {
-    if (el) stackRefs.value[name] = el;
-  };
-}
-
-function generateStack() {
-  Object.values(stackRefs.value).forEach((stack) => stack?.generateStack?.());
-}
-
-defineExpose({ generateStack });
+defineExpose({ generateStack, getURLParams, restoreFromURL });
 </script>
 
 <template>
   <div class="stack-row">
-    <component
-      v-for="section in STACK_SECTIONS"
-      :key="section.name"
-      :is="section.component"
-      :ref="setStackRef(section.name)"
+    <FrontendStack
+      :items="items"
+      :change="change"
+      :locked-items="lockedItems"
+      @lock="$emit('lock', $event)"
+    />
+    <DatabaseStack
+      :items="items"
+      :change="change"
       :locked-items="lockedItems"
       @lock="$emit('lock', $event)"
     />

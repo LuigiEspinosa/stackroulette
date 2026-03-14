@@ -148,7 +148,7 @@ export const CSS_FRAMEWORKS = [
     icon: 'no-icon.png',
     website: 'https://watercss.kognise.dev/',
   },
-  { name: 'Pure.css', icon: 'no-icon.png//purecss.io/' },
+  { name: 'Pure.css', icon: 'no-icon.png', website: 'https://purecss.io/' },
   {
     name: 'Ionic',
     icon: 'no-icon.png',
@@ -194,4 +194,110 @@ export const CSS_PREPROCESSORS = [
     icon: 'no-icon.png',
     website: 'https://linaria.dev/',
   },
+];
+
+export const DBMS = [
+  {
+    name: 'Cassandra',
+    icon: 'no-icon.png',
+    website: 'http://cassandra.apache.org/',
+  },
+  {
+    name: 'CockroachDB',
+    icon: 'no-icon.png',
+    website: 'https://www.cockroachlabs.com/',
+  },
+  {
+    name: 'CouchDB',
+    icon: 'no-icon.png',
+    website: 'https://couchdb.apache.org/',
+  },
+  {
+    name: 'MongoDB',
+    icon: 'no-icon.png',
+    website: 'https://www.mongodb.org/',
+  },
+  {
+    name: 'MariaDB',
+    icon: 'no-icon.png',
+    website: 'https://mariadb.org/',
+  },
+  { name: 'MySQL', icon: 'no-icon.png', website: 'http://dev.mysql.com/' },
+  { name: 'Neo4J', icon: 'no-icon.png', website: 'https://neo4j.com/' },
+  {
+    name: 'PostgreSQL',
+    icon: 'no-icon.png',
+    website: 'http://www.postgresql.org/',
+  },
+  {
+    name: 'PouchDB',
+    icon: 'no-icon.png',
+    website: 'http://pouchdb.com/',
+  },
+  { name: 'Redis', icon: 'no-icon.png', website: 'http://redis.io/' },
+  {
+    name: 'RethinkDB',
+    icon: 'no-icon.png',
+    website: 'https://rethinkdb.com/',
+  },
+  { name: 'SQLite', icon: 'no-icon.png', website: 'http://www.sqlite.org/' },
+  {
+    name: 'Timescale',
+    icon: 'no-icon.png',
+    website: 'https://www.timescale.com/',
+  },
+  {
+    name: 'DynamoDB',
+    icon: 'no-icon.png',
+    website: 'https://aws.amazon.com/dynamodb/',
+  },
+  {
+    name: 'Firebase Firestore',
+    icon: 'no-icon.png',
+    website: 'https://firebase.google.com/products/firestore',
+  },
+  {
+    name: 'SurrealDB',
+    icon: 'no-icon.png',
+    website: 'https://surrealdb.com/',
+  },
+  { name: 'FaunaDB', icon: 'no-icon.png', website: 'https://faunadb.org/' },
+  {
+    name: 'InfluxDB',
+    icon: 'no-icon.png',
+    website: 'https://www.influxdata.com/',
+  },
+  {
+    name: 'Elasticsearch',
+    icon: 'no-icon.png',
+    website: 'https://www.elastic.co/elasticsearch',
+  },
+  {
+    name: 'ClickHouse',
+    icon: 'no-icon.png',
+    website: 'https://clickhouse.com/',
+  },
+  { name: 'DuckDB', icon: 'no-icon.png', website: 'https://duckdb.org/' },
+  {
+    name: 'ScyllaDB',
+    icon: 'no-icon.png',
+    website: 'https://www.scylladb.com/',
+  },
+  {
+    name: 'PlanetScale',
+    icon: 'no-icon.png',
+    website: 'https://planetscale.com/',
+  },
+  { name: 'Neon', icon: 'no-icon.png', website: 'https://neon.tech/' },
+  {
+    name: 'ArangoDB',
+    icon: 'no-icon.png',
+    website: 'https://www.arangodb.com/',
+  },
+  {
+    name: 'TiDB',
+    icon: 'no-icon.png',
+    website: 'https://pingcap.com/tidb/',
+  },
+  { name: 'Turso', icon: 'no-icon.png', website: 'https://turso.tech/' },
 ];
