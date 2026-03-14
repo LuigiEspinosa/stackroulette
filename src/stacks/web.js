@@ -77,8 +77,8 @@ export const CSS_FRAMEWORKS = [
     icon: 'no-icon.png',
     website: 'https://tailwindcss.com/',
   },
-  { name: 'Bulma', icon: 'no-icon.png//bulma.io/' },
-  { name: 'UIkit', icon: 'no-icon.png//getuikit.com/' },
+  { name: 'Bulma', icon: 'no-icon.png', website: 'https://bulma.io/' },
+  { name: 'UIkit', icon: 'no-icon.png', website: 'https://getuikit.com/' },
   {
     name: 'Chakra UI',
     icon: 'no-icon.png',
@@ -99,8 +99,8 @@ export const CSS_FRAMEWORKS = [
     icon: 'no-icon.png',
     website: 'https://ui.shadcn.com/',
   },
-  { name: 'Mantine', icon: 'no-icon.png//mantine.dev/' },
-  { name: 'daisyUI', icon: 'no-icon.png//daisyui.com/' },
+  { name: 'Mantine', icon: 'no-icon.png', website: 'https://mantine.dev/' },
+  { name: 'daisyUI', icon: 'no-icon.png', website: 'https://daisyui.com/' },
   {
     name: 'Radix UI',
     icon: 'no-icon.png',
@@ -126,7 +126,7 @@ export const CSS_FRAMEWORKS = [
     icon: 'no-icon.png',
     website: 'https://primevue.org/',
   },
-  { name: 'Pico CSS', icon: 'no-icon.png//picocss.com/' },
+  { name: 'Pico CSS', icon: 'no-icon.png', website: 'https://picocss.com/' },
   {
     name: 'Milligram',
     icon: 'no-icon.png',
@@ -137,7 +137,7 @@ export const CSS_FRAMEWORKS = [
     icon: 'no-icon.png',
     website: 'https://open-props.style/',
   },
-  { name: 'Tachyons', icon: 'no-icon.png//tachyons.io/' },
+  { name: 'Tachyons', icon: 'no-icon.png', website: 'https://tachyons.io/' },
   {
     name: 'Spectre.css',
     icon: 'no-icon.png',
