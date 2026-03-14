@@ -10,9 +10,10 @@
 
     <h1 class="main-title" @click="headerClick">
       <router-link to="/">
-        <span class="logo"> <img src="./assets/roulette.svg" alt="⚙" /> </span
-        ><!--
-        -->stackRoulette();
+        <span class="logo">
+          <img src="./assets/roulette.svg" alt="⚙" />
+        </span>
+        stackRoulette();
       </router-link>
     </h1>
 

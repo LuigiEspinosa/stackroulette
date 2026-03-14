@@ -1,9 +1,12 @@
-$header-text-color: #277baf;
-$header-title-color: #6cbeff;
-$header-background-color: #c5eaff;
-$link-color: #6cbeff;
-$button-color: #6cbeff;
-$button-border-color: #78b8f7;
+/* Dark Mode Variables */
+$header-text-color: #e6e1ff;
+$header-title-color: #c7a6ff;
+$header-background-color: #0f0b18;
+$link-color: #b388ff;
+$button-color: #6c3bff;
+$button-border-color: #8c5dff;
+$body-background: #0b0712;
+$card-background: #151020;
 
 /**********************/
 
@@ -11,32 +14,51 @@ $button-border-color: #78b8f7;
 
 /**********************/
 
+body {
+  background-color: $body-background;
+  color: $header-text-color;
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  letter-spacing: -0.08rem;
+}
+
+/**********************/
+
 .container {
   margin-top: 1.5rem;
 }
+
+/**********************/
 
 .btn {
   background-color: $button-color;
   border-color: $button-border-color;
   border-radius: 10rem;
   letter-spacing: -0.08rem;
+  color: white;
+
+  &:hover {
+    background-color: lighten($button-color, 5%);
+    border-color: lighten($button-border-color, 5%);
+  }
 
   > strong {
     white-space: nowrap;
   }
 }
 
+/**********************/
+
 #confetti-canvas {
   top: 0;
   left: 0;
 }
 
+/**********************/
+
 .hero-background {
   position: absolute;
-  background-image: linear-gradient(
-    rgb(255, 255, 255) 0%,
-    $header-background-color 100%
-  );
+  background-image: linear-gradient(#090611 0%, $header-background-color 100%);
   z-index: -2;
   top: 0;
   left: 0;
@@ -46,12 +68,7 @@ $button-border-color: #78b8f7;
   border-bottom-right-radius: 50% 25%;
 }
 
-body {
-  color: $header-text-color;
-  font-family: 'Fira Code', monospace;
-  font-weight: 400;
-  letter-spacing: -0.08rem;
-}
+/**********************/
 
 h1,
 h2 {
@@ -59,17 +76,27 @@ h2 {
   font-family: 'Fira Code', monospace;
   letter-spacing: -0.2rem;
 }
+
 h1 {
   font-weight: 700;
 }
+
 h2 {
   font-weight: 500;
 }
+
+/**********************/
 
 a:link,
 a:visited {
   color: $link-color;
 }
+
+a:hover {
+  color: lighten($link-color, 10%);
+}
+
+/**********************/
 
 main {
   margin-top: 0.5rem;
@@ -80,6 +107,8 @@ nav {
   right: 1rem;
   top: 1rem;
 }
+
+/**********************/
 
 .main-title {
   text-align: center;
@@ -97,6 +126,7 @@ nav {
     transform: scale(1);
     transition: transform 0.2s;
   }
+
   > a:hover,
   > a:active {
     text-decoration: none;
@@ -110,6 +140,8 @@ nav {
   }
 }
 
+/**********************/
+
 @keyframes gearroll {
   0% {
     transform: rotateZ(0);
@@ -119,9 +151,11 @@ nav {
   }
 }
 
+/**********************/
+
 .sub-title {
   text-align: center;
-  color: #333;
+  color: #a79fd1;
   margin-top: 1.8rem;
   margin-bottom: 1rem;
   font-size: 1.6rem;
@@ -129,7 +163,7 @@ nav {
 }
 
 /******************/
-/* Medias-Queries */
+/* Media Queries */
 /******************/
 
 @media screen and (max-width: 992px) {
@@ -143,25 +177,31 @@ nav {
     height: 150px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .container {
     margin-top: 0.5rem;
   }
+
   nav {
     position: static;
     text-align: center;
   }
+
   .hero-background {
     height: 180px;
   }
 }
+
 @media screen and (max-width: 442px) {
   h1 {
     font-size: 2rem;
   }
+
   h2 {
     font-size: 1.5rem;
   }
+
   .hero-background {
     height: 190px;
   }
