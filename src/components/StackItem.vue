@@ -113,7 +113,7 @@ function getIcon(pic) {
   position: relative;
   z-index: 1;
   margin: 0.35rem;
-  min-width: 180px;
+  min-width: 205px;
 
   h1 {
     font-weight: 300;

@@ -301,3 +301,682 @@ export const DBMS = [
   },
   { name: 'Turso', icon: 'no-icon.png', website: 'https://turso.tech/' },
 ];
+
+export const BACKEND_ENVIRONMENTS = [
+  {
+    name: 'C#',
+    icon: 'no-icon.png',
+    website: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
+    frameworks: [
+      {
+        name: 'ASP.NET',
+        icon: 'no-icon.png',
+        website: 'https://dotnet.microsoft.com/apps/aspnet',
+      },
+      {
+        name: 'Carter',
+        icon: 'no-icon.png',
+        website: 'https://github.com/CarterCommunity/Carter',
+      },
+      {
+        name: 'Giraffe',
+        icon: 'no-icon.png',
+        website: 'https://giraffe-fsharp.github.io/',
+      },
+    ],
+  },
+  {
+    name: 'Crystal',
+    icon: 'no-icon.png',
+    website: 'https://crystal-lang.org/',
+    frameworks: [
+      {
+        name: 'Amber',
+        icon: 'no-icon.png',
+        website: 'https://amberframework.org/',
+      },
+      {
+        name: 'Lucky',
+        icon: 'no-icon.png',
+        website: 'https://luckyframework.org/',
+      },
+      {
+        name: 'Kemal',
+        icon: 'no-icon.png',
+        website: 'https://kemalcr.com/',
+      },
+      {
+        name: 'Spider-Gazelle',
+        icon: 'no-icon.png',
+        website: 'https://spider-gazelle.net/',
+      },
+      {
+        name: 'Shivneri',
+        icon: 'no-icon.png',
+        website: 'https://shivneriforcrystal.com/',
+      },
+    ],
+  },
+  {
+    name: 'Go',
+    icon: 'no-icon.png',
+    website: 'https://golang.org/',
+    frameworks: [
+      {
+        name: 'Buffalo',
+        icon: 'no-icon.png',
+        website: 'https://gobuffalo.io/',
+      },
+      {
+        name: 'Gin',
+        icon: 'no-icon.png',
+        website: 'https://github.com/gin-gonic/gin',
+      },
+      {
+        name: 'Gorilla Web Toolkit',
+        icon: 'no-icon.png',
+        website: 'http://www.gorillatoolkit.org/',
+      },
+      {
+        name: 'Fiber',
+        icon: 'no-icon.png',
+        website: 'https://gofiber.io/',
+      },
+      {
+        name: 'Echo',
+        icon: 'no-icon.png',
+        website: 'https://echo.labstack.com/',
+      },
+      {
+        name: 'Chi',
+        icon: 'no-icon.png',
+        website: 'https://go-chi.io/',
+      },
+      {
+        name: 'Beego',
+        icon: 'no-icon.png',
+        website: 'https://beego.wiki/',
+      },
+      {
+        name: 'Macaron',
+        icon: 'no-icon.png',
+        website: 'https://go-macaron.com/',
+      },
+    ],
+  },
+  {
+    name: 'Haskell',
+    icon: 'no-icon.png',
+    website: 'https://www.haskell.org/',
+    frameworks: [
+      {
+        name: 'Happstack',
+        icon: 'no-icon.png',
+        website: 'http://happstack.com/',
+      },
+      {
+        name: 'Miso',
+        icon: 'no-icon.png',
+        website: 'https://haskell-miso.org/',
+      },
+      {
+        name: 'Scotty',
+        icon: 'no-icon.png',
+        website: 'https://github.com/scotty-web/scotty',
+      },
+      {
+        name: 'Snap Framework',
+        icon: 'no-icon.png',
+        website: 'http://snapframework.com/',
+      },
+      {
+        name: 'Yesod',
+        icon: 'no-icon.png',
+        website: 'https://www.yesodweb.com/',
+      },
+      {
+        name: 'Servant',
+        icon: 'no-icon.png',
+        website: 'https://www.servant.dev/',
+      },
+    ],
+  },
+  {
+    name: 'Java',
+    icon: 'no-icon.png',
+    website: 'https://www.java.com/',
+    frameworks: [
+      { name: 'Grails', icon: 'no-icon.png', website: 'https://grails.org/' },
+      { name: 'Spark', icon: 'no-icon.png', website: 'http://sparkjava.com/' },
+      { name: 'Spring', icon: 'no-icon.png', website: 'https://spring.io/' },
+      {
+        name: 'Play',
+        icon: 'no-icon.png',
+        website: 'https://www.playframework.com/',
+      },
+      {
+        name: 'Quarkus',
+        icon: 'no-icon.png',
+        website: 'https://quarkus.io/',
+      },
+      {
+        name: 'Micronaut',
+        icon: 'no-icon.png',
+        website: 'https://micronaut.io/',
+      },
+      {
+        name: 'Vert.x',
+        icon: 'no-icon.png',
+        website: 'https://vertx.io/',
+      },
+      {
+        name: 'Helidon',
+        icon: 'no-icon.png',
+        website: 'https://helidon.io/',
+      },
+    ],
+  },
+  {
+    name: 'Node.js',
+    icon: 'no-icon.png',
+    website: 'https://nodejs.org/',
+    frameworks: [
+      {
+        name: 'Express',
+        icon: 'no-icon.png',
+        website: 'http://expressjs.com/',
+      },
+      { name: 'Koa', icon: 'no-icon.png', website: 'https://koajs.com/' },
+      { name: 'Hapi', icon: 'no-icon.png', website: 'http://hapijs.com/' },
+      { name: 'Sails', icon: 'no-icon.png', website: 'http://sailsjs.org/' },
+      {
+        name: 'Meteor',
+        icon: 'no-icon.png',
+        website: 'https://www.meteor.com/',
+      },
+      { name: 'Nest.js', icon: 'no-icon.png', website: 'https://nestjs.com/' },
+      {
+        name: 'Feathers',
+        icon: 'no-icon.png',
+        website: 'https://feathersjs.com/',
+      },
+      {
+        name: 'Nodal',
+        icon: 'no-icon.png',
+        website: 'http://www.nodaljs.com/',
+      },
+      {
+        name: 'KeystoneJS',
+        icon: 'no-icon.png',
+        website: 'https://www.keystonejs.com/',
+      },
+      {
+        name: 'Fastify',
+        icon: 'no-icon.png',
+        website: 'https://fastify.dev/',
+      },
+      {
+        name: 'AdonisJS',
+        icon: 'no-icon.png',
+        website: 'https://adonisjs.com/',
+      },
+      {
+        name: 'Hono',
+        icon: 'no-icon.png',
+        website: 'https://hono.dev/',
+      },
+    ],
+  },
+  {
+    name: 'OCaml',
+    icon: 'no-icon.png',
+    website: 'https://ocaml.org/',
+    frameworks: [
+      {
+        name: 'Ocsigen Eliom',
+        icon: 'no-icon.png',
+        website: 'https://ocsigen.org/eliom/',
+      },
+      {
+        name: 'Opium',
+        icon: 'no-icon.png',
+        website: 'https://github.com/rgrinberg/opium',
+      },
+      {
+        name: 'Dream',
+        icon: 'no-icon.png',
+        website: 'https://aantron.github.io/dream/',
+      },
+    ],
+  },
+  {
+    name: 'PHP',
+    icon: 'no-icon.png',
+    website: 'http://php.net/',
+    frameworks: [
+      { name: 'Laravel', icon: 'no-icon.png', website: 'http://laravel.com/' },
+      { name: 'Symfony', icon: 'no-icon.png', website: 'https://symfony.com/' },
+      {
+        name: 'CodeIgniter',
+        icon: 'no-icon.png',
+        website: 'http://www.codeigniter.com/',
+      },
+      {
+        name: 'Zend Framework',
+        icon: 'no-icon.png',
+        website: 'http://framework.zend.com/',
+      },
+      {
+        name: 'Slim',
+        icon: 'no-icon.png',
+        website: 'http://www.slimframework.com/',
+      },
+      {
+        name: 'Lumen',
+        icon: 'no-icon.png',
+        website: 'https://lumen.laravel.com/',
+      },
+      {
+        name: 'CakePHP',
+        icon: 'no-icon.png',
+        website: 'https://cakephp.org/',
+      },
+      {
+        name: 'Yii',
+        icon: 'no-icon.png',
+        website: 'https://www.yiiframework.com/',
+      },
+      {
+        name: 'Laminas',
+        icon: 'no-icon.png',
+        website: 'https://getlaminas.org/',
+      },
+    ],
+  },
+  {
+    name: 'Python',
+    icon: 'no-icon.png',
+    website: 'https://www.python.org/',
+    frameworks: [
+      {
+        name: 'Django',
+        icon: 'no-icon.png',
+        website: 'https://www.djangoproject.com/',
+      },
+      {
+        name: 'Flask',
+        icon: 'no-icon.png',
+        website: 'http://flask.pocoo.org/',
+      },
+      {
+        name: 'FastAPI',
+        icon: 'no-icon.png',
+        website: 'https://fastapi.tiangolo.com/',
+      },
+      {
+        name: 'AIOHTTP',
+        icon: 'aiohttp.png',
+        website: 'https://docs.aiohttp.org/en/stable/',
+      },
+      {
+        name: 'Bottle',
+        icon: 'no-icon.png',
+        website: 'https://bottlepy.org/',
+      },
+      {
+        name: 'CherryPy',
+        icon: 'no-icon.png',
+        website: 'https://cherrypy.org/',
+      },
+      {
+        name: 'Falcon',
+        icon: 'no-icon.png',
+        website: 'https://falcon.readthedocs.io/en/stable/',
+      },
+      {
+        name: 'Pyramid',
+        icon: 'pyramid.png',
+        website: 'https://trypyramid.com/',
+      },
+      {
+        name: 'Tornado',
+        icon: 'no-icon.png',
+        website: 'https://www.tornadoweb.org/',
+      },
+      {
+        name: 'Starlette',
+        icon: 'no-icon.png',
+        website: 'https://www.starlette.io/',
+      },
+      {
+        name: 'Litestar',
+        icon: 'no-icon.png',
+        website: 'https://litestar.dev/',
+      },
+      {
+        name: 'Sanic',
+        icon: 'no-icon.png',
+        website: 'https://sanic.dev/',
+      },
+    ],
+  },
+  {
+    name: 'Ruby',
+    icon: 'no-icon.png',
+    website: 'https://www.ruby-lang.org/',
+    frameworks: [
+      {
+        name: 'Grape',
+        icon: 'no-icon.png',
+        website: 'http://www.ruby-grape.org/',
+      },
+      {
+        name: 'Hanami',
+        icon: 'no-icon.png',
+        website: 'https://hanamirb.org/',
+      },
+      {
+        name: 'Padrino',
+        icon: 'no-icon.png',
+        website: 'http://padrinorb.com/',
+      },
+      {
+        name: 'Rails',
+        icon: 'no-icon.png',
+        website: 'https://rubyonrails.org/',
+      },
+      {
+        name: 'Sinatra',
+        icon: 'no-icon.png',
+        website: 'http://sinatrarb.com/',
+      },
+      {
+        name: 'Roda',
+        icon: 'no-icon.png',
+        website: 'http://roda.jeremyevans.net/',
+      },
+    ],
+  },
+  {
+    name: 'Rust',
+    icon: 'no-icon.png',
+    website: 'https://www.rust-lang.org/',
+    frameworks: [
+      {
+        name: 'Actix Web',
+        icon: 'no-icon.png',
+        website: 'https://actix.rs/',
+      },
+      {
+        name: 'Rocket',
+        icon: 'no-icon.png',
+        website: 'https://rocket.rs/',
+      },
+      {
+        name: 'Axum',
+        icon: 'no-icon.png',
+        website: 'https://github.com/tokio-rs/axum',
+      },
+      {
+        name: 'Tide',
+        icon: 'no-icon.png',
+        website: 'https://github.com/http-rs/tide',
+      },
+      {
+        name: 'Warp',
+        icon: 'no-icon.png',
+        website: 'https://github.com/seanmonstar/warp',
+      },
+      {
+        name: 'Poem',
+        icon: 'no-icon.png',
+        website: 'https://github.com/poem-web/poem',
+      },
+    ],
+  },
+  {
+    name: 'Elixir',
+    icon: 'no-icon.png',
+    website: 'https://elixir-lang.org/',
+    frameworks: [
+      {
+        name: 'Phoenix',
+        icon: 'no-icon.png',
+        website: 'https://www.phoenixframework.org/',
+      },
+      {
+        name: 'Plug',
+        icon: 'no-icon.png',
+        website: 'https://hexdocs.pm/plug/',
+      },
+      {
+        name: 'Absinthe',
+        icon: 'no-icon.png',
+        website: 'https://absinthe-graphql.org/',
+      },
+    ],
+  },
+  {
+    name: 'Kotlin',
+    icon: 'no-icon.png',
+    website: 'https://kotlinlang.org/',
+    frameworks: [
+      { name: 'Ktor', icon: 'no-icon.png', website: 'https://ktor.io/' },
+      {
+        name: 'Spring Boot',
+        icon: 'no-icon.png',
+        website: 'https://spring.io/guides/tutorials/spring-boot-kotlin/',
+      },
+      {
+        name: 'Javalin',
+        icon: 'no-icon.png',
+        website: 'https://javalin.io/',
+      },
+    ],
+  },
+  {
+    name: 'Scala',
+    icon: 'no-icon.png',
+    website: 'https://www.scala-lang.org/',
+    frameworks: [
+      {
+        name: 'Play Framework',
+        icon: 'no-icon.png',
+        website: 'https://www.playframework.com/',
+      },
+      {
+        name: 'Akka HTTP',
+        icon: 'no-icon.png',
+        website: 'https://doc.akka.io/docs/akka-http/current/',
+      },
+      {
+        name: 'http4s',
+        icon: 'no-icon.png',
+        website: 'https://http4s.org/',
+      },
+      {
+        name: 'ZIO HTTP',
+        icon: 'no-icon.png',
+        website: 'https://zio.dev/zio-http/',
+      },
+    ],
+  },
+  {
+    name: 'Swift',
+    icon: 'no-icon.png',
+    website: 'https://swift.org/',
+    frameworks: [
+      {
+        name: 'Vapor',
+        icon: 'no-icon.png',
+        website: 'https://vapor.codes/',
+      },
+      {
+        name: 'Hummingbird',
+        icon: 'no-icon.png',
+        website: 'https://hummingbird.codes/',
+      },
+    ],
+  },
+  {
+    name: 'Deno',
+    icon: 'no-icon.png',
+    website: 'https://deno.land/',
+    frameworks: [
+      {
+        name: 'Oak',
+        icon: 'no-icon.png',
+        website: 'https://oakserver.github.io/oak/',
+      },
+      {
+        name: 'Fresh',
+        icon: 'no-icon.png',
+        website: 'https://fresh.deno.dev/',
+      },
+      {
+        name: 'Hono',
+        icon: 'no-icon.png',
+        website: 'https://hono.dev/',
+      },
+    ],
+  },
+  {
+    name: 'Bun',
+    icon: 'no-icon.png',
+    website: 'https://bun.sh/',
+    frameworks: [
+      {
+        name: 'Elysia',
+        icon: 'no-icon.png',
+        website: 'https://elysiajs.com/',
+      },
+      {
+        name: 'Hono',
+        icon: 'no-icon.png',
+        website: 'https://hono.dev/',
+      },
+    ],
+  },
+  {
+    name: 'Clojure',
+    icon: 'no-icon.png',
+    website: 'https://clojure.org/',
+    frameworks: [
+      {
+        name: 'Compojure',
+        icon: 'no-icon.png',
+        website: 'https://github.com/weavejester/compojure',
+      },
+      {
+        name: 'Pedestal',
+        icon: 'no-icon.png',
+        website: 'http://pedestal.io/',
+      },
+      {
+        name: 'Luminus',
+        icon: 'no-icon.png',
+        website: 'http://www.luminusweb.net/',
+      },
+      {
+        name: 'Reitit',
+        icon: 'no-icon.png',
+        website: 'https://cljdoc.org/d/metosin/reitit/',
+      },
+    ],
+  },
+  {
+    name: 'Dart',
+    icon: 'no-icon.png',
+    website: 'https://dart.dev/',
+    frameworks: [
+      {
+        name: 'Shelf',
+        icon: 'no-icon.png',
+        website: 'https://pub.dev/packages/shelf',
+      },
+      {
+        name: 'Angel3',
+        icon: 'no-icon.png',
+        website: 'https://angel3.dev/',
+      },
+    ],
+  },
+  {
+    name: 'Perl',
+    icon: 'no-icon.png',
+    website: 'https://www.perl.org/',
+    frameworks: [
+      {
+        name: 'Catalyst',
+        icon: 'no-icon.png',
+        website: 'http://www.catalystframework.org/',
+      },
+      {
+        name: 'Mojolicious',
+        icon: 'no-icon.png',
+        website: 'https://www.mojolicious.org/',
+      },
+      {
+        name: 'Dancer2',
+        icon: 'no-icon.png',
+        website: 'https://metacpan.org/pod/Dancer2',
+      },
+    ],
+  },
+  {
+    name: 'Lua',
+    icon: 'no-icon.png',
+    website: 'https://www.lua.org/',
+    frameworks: [
+      {
+        name: 'Lapis',
+        icon: 'no-icon.png',
+        website: 'https://leafo.net/lapis/',
+      },
+      {
+        name: 'OpenResty',
+        icon: 'no-icon.png',
+        website: 'https://openresty.org/',
+      },
+    ],
+  },
+  {
+    name: 'Erlang',
+    icon: 'no-icon.png',
+    website: 'https://www.erlang.org/',
+    frameworks: [
+      {
+        name: 'Cowboy',
+        icon: 'no-icon.png',
+        website: 'https://ninenines.eu/docs/en/cowboy/',
+      },
+      {
+        name: 'Nitrogen',
+        icon: 'no-icon.png',
+        website: 'http://nitrogenproject.com/',
+      },
+      {
+        name: 'ChicagoBoss',
+        icon: 'no-icon.png',
+        website: 'http://www.chicagoboss.org/',
+      },
+    ],
+  },
+  {
+    name: 'Nim',
+    icon: 'no-icon.png',
+    website: 'https://nim-lang.org/',
+    frameworks: [
+      {
+        name: 'Jester',
+        icon: 'no-icon.png',
+        website: 'https://github.com/dom96/jester',
+      },
+      {
+        name: 'Mummy',
+        icon: 'no-icon.png',
+        website: 'https://github.com/guzba/mummy',
+      },
+    ],
+  },
+];

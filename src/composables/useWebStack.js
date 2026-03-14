@@ -5,6 +5,7 @@ import {
   CSS_FRAMEWORKS,
   CSS_PREPROCESSORS,
   DBMS,
+  BACKEND_ENVIRONMENTS,
 } from '../stacks/web';
 
 const URL_KEYS = [
@@ -13,6 +14,12 @@ const URL_KEYS = [
   ['cssFramework', 'cf', CSS_FRAMEWORKS],
   ['cssPreprocessor', 'cp', CSS_PREPROCESSORS],
   ['dbms', 'db', DBMS],
+  ['backend_environment', 'be', BACKEND_ENVIRONMENTS],
+  [
+    'backend_framework',
+    'bf',
+    BACKEND_ENVIRONMENTS.flatMap((e) => e.frameworks),
+  ],
 ];
 
 const SLOT_KEYS = URL_KEYS.map(([k]) => k);
@@ -26,12 +33,30 @@ export function useWebStack(lockedItems, onUpdate) {
       setTimeout(() => {
         pick('jsFramework', JS_FRAMEWORKS);
         pick('jsPreprocessor', JS_PREPROCESSORS);
+        pick('backend_environment', BACKEND_ENVIRONMENTS);
+        pick(
+          'backend_framework',
+          items.value.backend_environment?.frameworks ?? [],
+        );
         pick('cssFramework', CSS_FRAMEWORKS);
         pick('cssPreprocessor', CSS_PREPROCESSORS);
         pick('dbms', DBMS);
         resolve();
       }, 250),
     );
+  }
+
+  // Re-pick framwork from the newly selected environment's list.
+  function changeBackendEnv() {
+    basePick('backend_environment', BACKEND_ENVIRONMENTS, () => {
+      basePick(
+        'backend_framework',
+        items.value.backend_environment?.frameworks ?? [],
+        () => {
+          onUpdate?.();
+        },
+      );
+    });
   }
 
   function change(key, pool, callback) {
@@ -59,6 +84,7 @@ export function useWebStack(lockedItems, onUpdate) {
     items,
     generateStack,
     change,
+    changeBackendEnv,
     getURLParams,
     restoreFromURL,
   };

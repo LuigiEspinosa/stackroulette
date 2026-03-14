@@ -141,6 +141,7 @@ onMounted(async () => {
   padding: 0.25rem 0.5rem;
 }
 
+.stack-backend-container,
 .stack-row {
   display: flex;
   align-items: flex-start;
@@ -195,6 +196,12 @@ onMounted(async () => {
 
   .stack {
     margin: 0 0 3rem 0;
+  }
+
+  .stack-backend-container .stack-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
   }
 }
 </style>
