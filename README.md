@@ -10,6 +10,8 @@ This project is not intended to provide advices or best practice about what tech
 
 ## Contribute
 
+> Refactored the Monoloithic `Home.vue` and `stack.js` into a per-stack-type architecture using Vue 3 Composition API.
+
 I tried to be as exhaustive as possible, but I don't know everything, so ff you don't see your favorite language/framework/tool popping in the roulette, feel free to contribute and make a PR mentionning that you're adding a new technology.
 
 Any improvement is also appreciated.
