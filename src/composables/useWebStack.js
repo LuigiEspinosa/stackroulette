@@ -6,7 +6,9 @@ import {
   CSS_PREPROCESSORS,
   DBMS,
   BACKEND_ENVIRONMENTS,
+  CMS,
 } from '../stacks/web';
+import { computed } from 'vue';
 
 const URL_KEYS = [
   ['jsFramework', 'jf', JS_FRAMEWORKS],
@@ -20,6 +22,7 @@ const URL_KEYS = [
     'bf',
     BACKEND_ENVIRONMENTS.flatMap((e) => e.frameworks),
   ],
+  ['cms', 'cm', CMS],
 ];
 
 const SLOT_KEYS = URL_KEYS.map(([k]) => k);
@@ -41,6 +44,7 @@ export function useWebStack(lockedItems, onUpdate) {
         pick('cssFramework', CSS_FRAMEWORKS);
         pick('cssPreprocessor', CSS_PREPROCESSORS);
         pick('dbms', DBMS);
+        pick('cms', CMS);
         resolve();
       }, 250),
     );
@@ -80,6 +84,10 @@ export function useWebStack(lockedItems, onUpdate) {
     });
   }
 
+  const difficultyItems = computed(() =>
+    SLOT_KEYS.map((k) => items.value[k]).filter(Boolean),
+  );
+
   return {
     items,
     generateStack,
@@ -87,5 +95,6 @@ export function useWebStack(lockedItems, onUpdate) {
     changeBackendEnv,
     getURLParams,
     restoreFromURL,
+    difficultyItems,
   };
 }

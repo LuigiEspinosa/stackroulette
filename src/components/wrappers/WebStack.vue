@@ -4,6 +4,7 @@ import { useWebStack } from '../../composables/useWebStack';
 import FrontendStack from '../stacks/FrontendStack.vue';
 import DatabaseStack from '../stacks/DatabaseStack.vue';
 import BackendStack from '../stacks/BackendStack.vue';
+import CMSStack from '../stacks/CMSStack.vue';
 
 const props = defineProps({ lockedItems: { type: Object, required: true } });
 
@@ -16,9 +17,10 @@ const {
   changeBackendEnv,
   getURLParams,
   restoreFromURL,
+  difficultyItems,
 } = useWebStack(toRef(props, 'lockedItems'), () => emit('update'));
 
-defineExpose({ generateStack, getURLParams, restoreFromURL });
+defineExpose({ generateStack, getURLParams, restoreFromURL, difficultyItems });
 </script>
 
 <template>
@@ -39,6 +41,15 @@ defineExpose({ generateStack, getURLParams, restoreFromURL });
         @lock="$emit('lock', $event)"
       />
       <DatabaseStack
+        :items="items"
+        :change="change"
+        :locked-items="lockedItems"
+        @lock="$emit('lock', $event)"
+      />
+    </div>
+
+    <div class="stack-row">
+      <CMSStack
         :items="items"
         :change="change"
         :locked-items="lockedItems"

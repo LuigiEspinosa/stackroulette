@@ -980,3 +980,55 @@ export const BACKEND_ENVIRONMENTS = [
     ],
   },
 ];
+
+export const CMS = [
+  { name: 'WordPress', icon: 'no-icon.png', website: 'https://wordpress.org/' },
+  { name: 'Strapi', icon: 'no-icon.png', website: 'https://strapi.io/' },
+  {
+    name: 'Contentful',
+    icon: 'no-icon.png',
+    website: 'https://www.contentful.com/',
+  },
+  { name: 'Sanity', icon: 'no-icon.png', website: 'https://www.sanity.io/' },
+  { name: 'Ghost', icon: 'no-icon.png', website: 'https://ghost.org/' },
+  { name: 'Directus', icon: 'no-icon.png', website: 'https://directus.io/' },
+  {
+    name: 'Payload CMS',
+    icon: 'no-icon.png',
+    website: 'https://payloadcms.com/',
+  },
+  { name: 'Prismic', icon: 'no-icon.png', website: 'https://prismic.io/' },
+  {
+    name: 'DatoCMS',
+    icon: 'no-icon.png',
+    website: 'https://www.datocms.com/',
+  },
+  {
+    name: 'Storyblok',
+    icon: 'no-icon.png',
+    website: 'https://www.storyblok.com/',
+  },
+  { name: 'Hygraph', icon: 'no-icon.png', website: 'https://hygraph.com/' },
+  {
+    name: 'Apostrophe',
+    icon: 'no-icon.png',
+    website: 'https://apostrophecms.com/',
+  },
+  {
+    name: 'Craft CMS',
+    icon: 'no-icon.png',
+    website: 'https://craftcms.com/',
+  },
+  { name: 'Drupal', icon: 'no-icon.png', website: 'https://www.drupal.org/' },
+  { name: 'Tina CMS', icon: 'no-icon.png', website: 'https://tina.io/' },
+  {
+    name: 'Builder.io',
+    icon: 'no-icon.png',
+    website: 'https://www.builder.io/',
+  },
+  {
+    name: 'Keystatic',
+    icon: 'no-icon.png',
+    website: 'https://keystatic.com/',
+  },
+];

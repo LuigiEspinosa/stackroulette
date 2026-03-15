@@ -3,11 +3,17 @@ import { computed, ref, nextTick, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { sample as _sample } from 'lodash';
 import confetti from 'canvas-confetti';
+import { MAINSTREAM } from '../stacks/mainstream';
+
 import WebStack from '../components/wrappers/WebStack.vue';
 
 // Registry: Adding a new stack type
 const STACK_TYPES = {
   web: WebStack,
+};
+
+const STACK_META = {
+  web: { label: '🌐 Web App Stack', badgeClass: 'badge-web' },
 };
 
 const router = useRouter();
@@ -17,6 +23,17 @@ const stackType = ref(null);
 const lockedItems = ref({});
 const stackRef = ref(null);
 const linkCopied = ref(null);
+
+const stackDifficulty = computed(() => {
+  const d = stackRef.value?.difficultyItems;
+  if (!d?.length) return null;
+  const ratio = d.filter((i) => !MAINSTREAM.has(i.name)).length / d.length;
+  if (ratio < 0.2) return { label: 'Mainstream Stack', emoji: '🟢' };
+  if (ratio < 0.4) return { label: 'Adventurous Stack', emoji: '🔵' };
+  if (ratio < 0.6) return { label: 'Hipster Stack', emoji: '🟣' };
+  if (ratio < 0.8) return { label: 'Expert Mode', emoji: '🔴' };
+  return { label: '10x Mode', emoji: '💀' };
+});
 
 const currentStackComponent = computed(() =>
   stackType.value ? STACK_TYPES[stackType.value] : null,
@@ -114,6 +131,18 @@ onMounted(async () => {
 
     <main>
       <div id="result" v-if="stackType">
+        <div class="stack-type-badge text-center">
+          <span
+            v-if="STACK_META[stackType]"
+            :class="['badge', STACK_META[stackType].badgeClass]"
+          >
+            {{ STACK_META[stackType].label }}
+          </span>
+          <span v-if="stackDifficulty" class="badge badge-difficulty ms-2">
+            {{ stackDifficulty.emoji }} {{ stackDifficulty.label }}
+          </span>
+        </div>
+
         <component
           :is="currentStackComponent"
           ref="stackRef"
@@ -130,8 +159,36 @@ onMounted(async () => {
 </template>
 
 <style lang="scss">
+@use 'sass:color';
+
+$stack-title-color: rgb(108, 190, 255);
+$stack-border-color: rgb(108, 190, 255);
+
 #result {
   transform: scale(0.9);
+}
+
+.stack-type-badge {
+  margin-bottom: 2.5rem;
+
+  .badge {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+  }
+
+  .badge-difficulty {
+    background-color: #f8f9fa;
+    color: #555;
+    border: 1px solid #dee2e6;
+  }
+
+  .badge-web {
+    background-color: $stack-title-color;
+    color: color.adjust($stack-title-color, $lightness: -40%);
+    border: 1px solid $stack-border-color;
+  }
 }
 
 .btn-copy-link {
