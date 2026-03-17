@@ -1,6 +1,6 @@
 <script setup>
 import StackItem from '../../components/StackItem.vue';
-import { DBMS } from '../../stacks/web';
+import { WASM_TOOLCHAINS } from '../../stacks/web';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,16 +12,16 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'dbms',
-    title: 'DBMS',
-    options: DBMS,
+    key: 'wasmToolchain',
+    title: 'Toolchain',
+    options: WASM_TOOLCHAINS,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-database">
-    <h1>Database</h1>
+  <section class="stack stack-wasm">
+    <h1>WebAssembly</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

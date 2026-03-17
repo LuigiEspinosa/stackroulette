@@ -1032,3 +1032,484 @@ export const CMS = [
     website: 'https://keystatic.com/',
   },
 ];
+
+export const CONTAINERS = [
+  { name: 'Docker', icon: 'no-icon.png', website: 'https://www.docker.com/' },
+  {
+    name: 'Kubernetes',
+    icon: 'no-icon.png',
+    website: 'https://kubernetes.io/',
+  },
+  {
+    name: 'Docker Compose',
+    icon: 'no-icon.png',
+    website: 'https://docs.docker.com/compose/',
+  },
+  { name: 'Podman', icon: 'no-icon.png', website: 'https://podman.io/' },
+  { name: 'Helm', icon: 'no-icon.png', website: 'https://helm.sh/' },
+  { name: 'Rancher', icon: 'no-icon.png', website: 'https://rancher.com/' },
+  {
+    name: 'OpenShift',
+    icon: 'no-icon.png',
+    website: 'https://www.redhat.com/en/technologies/cloud-computing/openshift',
+  },
+  {
+    name: 'Nomad',
+    icon: 'no-icon.png',
+    website: 'https://www.nomadproject.io/',
+  },
+  { name: 'k3s', icon: 'no-icon.png', website: 'https://k3s.io/' },
+  {
+    name: 'Docker Swarm',
+    icon: 'no-icon.png',
+    website: 'https://docs.docker.com/engine/swarm/',
+  },
+];
+
+export const CLOUD_PROVIDERS = [
+  { name: 'AWS', icon: 'no-icon.png', website: 'https://aws.amazon.com/' },
+  {
+    name: 'Google Cloud',
+    icon: 'no-icon.png',
+    website: 'https://cloud.google.com/',
+  },
+  {
+    name: 'Azure',
+    icon: 'no-icon.png',
+    website: 'https://azure.microsoft.com/',
+  },
+  {
+    name: 'DigitalOcean',
+    icon: 'no-icon.png',
+    website: 'https://www.digitalocean.com/',
+  },
+  { name: 'Vercel', icon: 'no-icon.png', website: 'https://vercel.com/' },
+  { name: 'Netlify', icon: 'no-icon.png', website: 'https://www.netlify.com/' },
+  { name: 'Render', icon: 'no-icon.png', website: 'https://render.com/' },
+  { name: 'Railway', icon: 'no-icon.png', website: 'https://railway.app/' },
+  { name: 'Fly.io', icon: 'no-icon.png', website: 'https://fly.io/' },
+  {
+    name: 'Cloudflare Workers',
+    icon: 'no-icon.png',
+    website: 'https://workers.cloudflare.com/',
+  },
+  {
+    name: 'Linode / Akamai',
+    icon: 'no-icon.png',
+    website: 'https://www.linode.com/',
+  },
+  { name: 'Heroku', icon: 'no-icon.png', website: 'https://www.heroku.com/' },
+  {
+    name: 'IBM Cloud',
+    icon: 'no-icon.png',
+    website: 'https://www.ibm.com/cloud',
+  },
+  {
+    name: 'Hetzner',
+    icon: 'no-icon.png',
+    website: 'https://www.hetzner.com/',
+  },
+  {
+    name: 'GitHub Pages',
+    icon: 'no-icon.png',
+    website: 'https://pages.github.com/',
+  },
+  {
+    name: 'Cloudflare Pages',
+    icon: 'no-icon.png',
+    website: 'https://pages.cloudflare.com/',
+  },
+  {
+    name: 'Firebase Hosting',
+    icon: 'no-icon.png',
+    website: 'https://firebase.google.com/products/hosting',
+  },
+  { name: 'Surge.sh', icon: 'no-icon.png', website: 'https://surge.sh/' },
+  {
+    name: 'Deno Deploy',
+    icon: 'no-icon.png',
+    website: 'https://deno.com/deploy',
+  },
+  {
+    name: 'Oracle Cloud Free',
+    icon: 'no-icon.png',
+    website: 'https://www.oracle.com/cloud/free/',
+  },
+  { name: 'Koyeb', icon: 'no-icon.png', website: 'https://www.koyeb.com/' },
+  { name: 'Vultr', icon: 'no-icon.png', website: 'https://www.vultr.com/' },
+  {
+    name: 'Scaleway',
+    icon: 'no-icon.png',
+    website: 'https://www.scaleway.com/',
+  },
+  { name: 'Zeabur', icon: 'no-icon.png', website: 'https://zeabur.com/' },
+];
+
+export const API_LAYERS = [
+  { name: 'REST', icon: 'no-icon.png', website: 'https://restfulapi.net/' },
+  {
+    name: 'GraphQL',
+    icon: 'no-icon.png',
+    website: 'https://graphql.org/',
+  },
+  { name: 'gRPC', icon: 'no-icon.png', website: 'https://grpc.io/' },
+  { name: 'tRPC', icon: 'no-icon.png', website: 'https://trpc.io/' },
+  {
+    name: 'WebSockets',
+    icon: 'no-icon.png',
+    website: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API',
+  },
+  { name: 'WebRTC', icon: 'no-icon.png', website: 'https://webrtc.org/' },
+  {
+    name: 'OpenAPI / Swagger',
+    icon: 'no-icon.png',
+    website: 'https://www.openapis.org/',
+  },
+  {
+    name: 'JSON:API',
+    icon: 'no-icon.png',
+    website: 'https://jsonapi.org/',
+  },
+  {
+    name: 'Server-Sent Events',
+    icon: 'no-icon.png',
+    website:
+      'https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events',
+  },
+  { name: 'SOAP', icon: 'no-icon.png', website: 'https://www.w3.org/TR/soap/' },
+];
+
+export const AUTH_PROVIDERS = [
+  { name: 'Auth0', icon: 'no-icon.png', website: 'https://auth0.com/' },
+  { name: 'Clerk', icon: 'no-icon.png', website: 'https://clerk.com/' },
+  {
+    name: 'Firebase Auth',
+    icon: 'no-icon.png',
+    website: 'https://firebase.google.com/docs/auth',
+  },
+  {
+    name: 'Supabase Auth',
+    icon: 'no-icon.png',
+    website: 'https://supabase.com/docs/guides/auth',
+  },
+  {
+    name: 'NextAuth.js',
+    icon: 'no-icon.png',
+    website: 'https://next-auth.js.org/',
+  },
+  {
+    name: 'Keycloak',
+    icon: 'no-icon.png',
+    website: 'https://www.keycloak.org/',
+  },
+  { name: 'Okta', icon: 'no-icon.png', website: 'https://www.okta.com/' },
+  {
+    name: 'Passport.js',
+    icon: 'no-icon.png',
+    website: 'http://www.passportjs.org/',
+  },
+  {
+    name: 'AWS Cognito',
+    icon: 'no-icon.png',
+    website: 'https://aws.amazon.com/cognito/',
+  },
+  { name: 'Magic', icon: 'no-icon.png', website: 'https://magic.link/' },
+  { name: 'Lucia', icon: 'no-icon.png', website: 'https://lucia-auth.com/' },
+  {
+    name: 'Better Auth',
+    icon: 'no-icon.png',
+    website: 'https://www.better-auth.com/',
+  },
+  { name: 'Kinde', icon: 'no-icon.png', website: 'https://kinde.com/' },
+  { name: 'WorkOS', icon: 'no-icon.png', website: 'https://workos.com/' },
+];
+
+export const MICROFRONTENDS = [
+  {
+    name: 'Module Federation',
+    icon: 'no-icon.png',
+    website: 'https://module-federation.io/',
+  },
+  {
+    name: 'single-spa',
+    icon: 'no-icon.png',
+    website: 'https://single-spa.js.org/',
+  },
+  { name: 'Bit', icon: 'no-icon.png', website: 'https://bit.dev/' },
+  { name: 'Piral', icon: 'no-icon.png', website: 'https://piral.io/' },
+  {
+    name: 'Luigi',
+    icon: 'no-icon.png',
+    website: 'https://luigi-project.io/',
+  },
+  { name: 'Nx', icon: 'no-icon.png', website: 'https://nx.dev/' },
+  {
+    name: 'Turborepo',
+    icon: 'no-icon.png',
+    website: 'https://turbo.build/',
+  },
+  { name: 'Lerna', icon: 'no-icon.png', website: 'https://lerna.js.org/' },
+  {
+    name: 'Qiankun',
+    icon: 'no-icon.png',
+    website: 'https://qiankun.umijs.org/',
+  },
+  { name: 'Podium', icon: 'no-icon.png', website: 'https://podium-lib.io/' },
+];
+
+export const CICD = [
+  {
+    name: 'GitHub Actions',
+    icon: 'no-icon.png',
+    website: 'https://github.com/features/actions',
+  },
+  {
+    name: 'GitLab CI',
+    icon: 'no-icon.png',
+    website: 'https://docs.gitlab.com/ee/ci/',
+  },
+  {
+    name: 'CircleCI',
+    icon: 'no-icon.png',
+    website: 'https://circleci.com/',
+  },
+  {
+    name: 'Travis CI',
+    icon: 'no-icon.png',
+    website: 'https://travis-ci.org/',
+  },
+  {
+    name: 'Jenkins',
+    icon: 'no-icon.png',
+    website: 'https://www.jenkins.io/',
+  },
+  {
+    name: 'Drone CI',
+    icon: 'no-icon.png',
+    website: 'https://www.drone.io/',
+  },
+  {
+    name: 'ArgoCD',
+    icon: 'no-icon.png',
+    website: 'https://argoproj.github.io/cd/',
+  },
+  { name: 'Tekton', icon: 'no-icon.png', website: 'https://tekton.dev/' },
+  {
+    name: 'TeamCity',
+    icon: 'no-icon.png',
+    website: 'https://www.jetbrains.com/teamcity/',
+  },
+  {
+    name: 'Buildkite',
+    icon: 'no-icon.png',
+    website: 'https://buildkite.com/',
+  },
+  {
+    name: 'Woodpecker CI',
+    icon: 'no-icon.png',
+    website: 'https://woodpecker-ci.org/',
+  },
+  { name: 'Flux CD', icon: 'no-icon.png', website: 'https://fluxcd.io/' },
+];
+
+export const MONITORING = [
+  {
+    name: 'Prometheus',
+    icon: 'no-icon.png',
+    website: 'https://prometheus.io/',
+  },
+  { name: 'Grafana', icon: 'no-icon.png', website: 'https://grafana.com/' },
+  {
+    name: 'Datadog',
+    icon: 'no-icon.png',
+    website: 'https://www.datadoghq.com/',
+  },
+  { name: 'Sentry', icon: 'no-icon.png', website: 'https://sentry.io/' },
+  {
+    name: 'New Relic',
+    icon: 'no-icon.png',
+    website: 'https://newrelic.com/',
+  },
+  {
+    name: 'Elastic Stack',
+    icon: 'no-icon.png',
+    website: 'https://www.elastic.co/',
+  },
+  {
+    name: 'OpenTelemetry',
+    icon: 'no-icon.png',
+    website: 'https://opentelemetry.io/',
+  },
+  {
+    name: 'Jaeger',
+    icon: 'no-icon.png',
+    website: 'https://www.jaegertracing.io/',
+  },
+  {
+    name: 'Honeycomb',
+    icon: 'no-icon.png',
+    website: 'https://www.honeycomb.io/',
+  },
+  {
+    name: 'LogRocket',
+    icon: 'no-icon.png',
+    website: 'https://logrocket.com/',
+  },
+  { name: 'PostHog', icon: 'no-icon.png', website: 'https://posthog.com/' },
+  { name: 'SigNoz', icon: 'no-icon.png', website: 'https://signoz.io/' },
+  { name: 'Axiom', icon: 'no-icon.png', website: 'https://axiom.co/' },
+];
+
+export const MESSAGE_QUEUES = [
+  {
+    name: 'Apache Kafka',
+    icon: 'no-icon.png',
+    website: 'https://kafka.apache.org/',
+  },
+  {
+    name: 'RabbitMQ',
+    icon: 'no-icon.png',
+    website: 'https://www.rabbitmq.com/',
+  },
+  {
+    name: 'Redis Pub/Sub',
+    icon: 'no-icon.png',
+    website: 'https://redis.io/topics/pubsub',
+  },
+  {
+    name: 'Amazon SQS',
+    icon: 'no-icon.png',
+    website: 'https://aws.amazon.com/sqs/',
+  },
+  { name: 'NATS', icon: 'no-icon.png', website: 'https://nats.io/' },
+  { name: 'BullMQ', icon: 'no-icon.png', website: 'https://bullmq.io/' },
+  {
+    name: 'Apache Pulsar',
+    icon: 'no-icon.png',
+    website: 'https://pulsar.apache.org/',
+  },
+  {
+    name: 'ActiveMQ',
+    icon: 'no-icon.png',
+    website: 'https://activemq.apache.org/',
+  },
+  { name: 'ZeroMQ', icon: 'no-icon.png', website: 'https://zeromq.org/' },
+  {
+    name: 'Google Pub/Sub',
+    icon: 'no-icon.png',
+    website: 'https://cloud.google.com/pubsub',
+  },
+];
+
+export const TESTING_FRAMEWORKS = [
+  { name: 'Jest', icon: 'no-icon.png', website: 'https://jestjs.io/' },
+  { name: 'Vitest', icon: 'no-icon.png', website: 'https://vitest.dev/' },
+  { name: 'Mocha', icon: 'no-icon.png', website: 'https://mochajs.org/' },
+  {
+    name: 'Jasmine',
+    icon: 'no-icon.png',
+    website: 'https://jasmine.github.io/',
+  },
+  { name: 'AVA', icon: 'no-icon.png', website: 'https://github.com/avajs/ava' },
+  {
+    name: 'Karma',
+    icon: 'no-icon.png',
+    website: 'https://karma-runner.github.io/',
+  },
+  {
+    name: 'Testing Library',
+    icon: 'no-icon.png',
+    website: 'https://testing-library.com/',
+  },
+  {
+    name: 'Storybook',
+    icon: 'no-icon.png',
+    website: 'https://storybook.js.org/',
+  },
+];
+
+export const E2E_FRAMEWORKS = [
+  { name: 'Cypress', icon: 'no-icon.png', website: 'https://www.cypress.io/' },
+  {
+    name: 'Playwright',
+    icon: 'no-icon.png',
+    website: 'https://playwright.dev/',
+  },
+  {
+    name: 'Selenium',
+    icon: 'no-icon.png',
+    website: 'https://www.selenium.dev/',
+  },
+  {
+    name: 'WebdriverIO',
+    icon: 'no-icon.png',
+    website: 'https://webdriver.io/',
+  },
+  { name: 'Puppeteer', icon: 'no-icon.png', website: 'https://pptr.dev/' },
+  {
+    name: 'Nightwatch.js',
+    icon: 'no-icon.png',
+    website: 'https://nightwatchjs.org/',
+  },
+];
+
+export const WASM_TOOLCHAINS = [
+  {
+    name: 'Rust + wasm-pack',
+    icon: 'no-icon.png',
+    website: 'https://rustwasm.github.io/wasm-pack/',
+  },
+  {
+    name: 'AssemblyScript',
+    icon: 'no-icon.png',
+    website: 'https://www.assemblyscript.org/',
+  },
+  {
+    name: 'Emscripten (C/C++)',
+    icon: 'no-icon.png',
+    website: 'https://emscripten.org/',
+  },
+  {
+    name: 'Blazor WebAssembly',
+    icon: 'no-icon.png',
+    website: 'https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor',
+  },
+  {
+    name: 'Go + TinyGo',
+    icon: 'no-icon.png',
+    website: 'https://tinygo.org/',
+  },
+  { name: 'Zig', icon: 'no-icon.png', website: 'https://ziglang.org/' },
+  {
+    name: 'Kotlin/Wasm',
+    icon: 'no-icon.png',
+    website: 'https://kotl.in/wasm',
+  },
+];
+
+export const WEB_BUNDLERS = [
+  { name: 'Vite', icon: 'no-icon.png', website: 'https://vitejs.dev/' },
+  { name: 'webpack', icon: 'no-icon.png', website: 'https://webpack.js.org/' },
+  {
+    name: 'esbuild',
+    icon: 'no-icon.png',
+    website: 'https://esbuild.github.io/',
+  },
+  { name: 'Rollup', icon: 'no-icon.png', website: 'https://rollupjs.org/' },
+  { name: 'Parcel', icon: 'no-icon.png', website: 'https://parceljs.org/' },
+  {
+    name: 'Turbopack',
+    icon: 'no-icon.png',
+    website: 'https://turbo.build/pack',
+  },
+  { name: 'Bun', icon: 'no-icon.png', website: 'https://bun.sh/' },
+  { name: 'Rspack', icon: 'no-icon.png', website: 'https://rspack.dev/' },
+];
+
+export const WEB_PACKAGE_MANAGERS = [
+  { name: 'npm', icon: 'no-icon.png', website: 'https://www.npmjs.com/' },
+  { name: 'pnpm', icon: 'no-icon.png', website: 'https://pnpm.io/' },
+  { name: 'Yarn', icon: 'no-icon.png', website: 'https://yarnpkg.com/' },
+  { name: 'Bun', icon: 'no-icon.png', website: 'https://bun.sh/' },
+  { name: 'Deno', icon: 'no-icon.png', website: 'https://deno.com/' },
+];

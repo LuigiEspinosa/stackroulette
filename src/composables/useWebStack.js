@@ -7,6 +7,19 @@ import {
   DBMS,
   BACKEND_ENVIRONMENTS,
   CMS,
+  CONTAINERS,
+  CLOUD_PROVIDERS,
+  API_LAYERS,
+  AUTH_PROVIDERS,
+  MICROFRONTENDS,
+  CICD,
+  MONITORING,
+  MESSAGE_QUEUES,
+  TESTING_FRAMEWORKS,
+  E2E_FRAMEWORKS,
+  WASM_TOOLCHAINS,
+  WEB_BUNDLERS,
+  WEB_PACKAGE_MANAGERS,
 } from '../stacks/web';
 import { computed } from 'vue';
 
@@ -23,6 +36,19 @@ const URL_KEYS = [
     BACKEND_ENVIRONMENTS.flatMap((e) => e.frameworks),
   ],
   ['cms', 'cm', CMS],
+  ['container', 'ct', CONTAINERS],
+  ['cloudProvider', 'cl', CLOUD_PROVIDERS],
+  ['apiLayer', 'al', API_LAYERS],
+  ['authProvider', 'ap', AUTH_PROVIDERS],
+  ['microfrontend', 'mf', MICROFRONTENDS],
+  ['cicd', 'cd', CICD],
+  ['monitoring', 'mn', MONITORING],
+  ['messageQueue', 'mq', MESSAGE_QUEUES],
+  ['testingFramework', 'tf', TESTING_FRAMEWORKS],
+  ['e2eFramework', 'ef', E2E_FRAMEWORKS],
+  ['wasmToolchain', 'wt', WASM_TOOLCHAINS],
+  ['webBundler', 'wb', WEB_BUNDLERS],
+  ['packageManager', 'pm', WEB_PACKAGE_MANAGERS],
 ];
 
 const SLOT_KEYS = URL_KEYS.map(([k]) => k);
@@ -45,6 +71,19 @@ export function useWebStack(lockedItems, onUpdate) {
         pick('cssPreprocessor', CSS_PREPROCESSORS);
         pick('dbms', DBMS);
         pick('cms', CMS);
+        pick('container', CONTAINERS);
+        pick('cloudProvider', CLOUD_PROVIDERS);
+        pick('apiLayer', API_LAYERS);
+        pick('authProvider', AUTH_PROVIDERS);
+        pick('microfrontend', MICROFRONTENDS);
+        pick('cicd', CICD);
+        pick('monitoring', MONITORING);
+        pick('messageQueue', MESSAGE_QUEUES);
+        pick('testingFramework', TESTING_FRAMEWORKS);
+        pick('e2eFramework', E2E_FRAMEWORKS);
+        pick('wasmToolchain', WASM_TOOLCHAINS);
+        pick('webBundler', WEB_BUNDLERS);
+        pick('packageManager', WEB_PACKAGE_MANAGERS);
         resolve();
       }, 250),
     );

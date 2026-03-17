@@ -210,13 +210,7 @@ $stack-border-color: rgb(108, 190, 255);
   margin: 0 0.7rem;
   position: relative;
 
-  &:only-of-type {
-    margin-bottom: 3rem;
-  }
-
   & > h1 {
-    position: absolute;
-    top: -2.3rem;
     font-weight: 500;
   }
 }

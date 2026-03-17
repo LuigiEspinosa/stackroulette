@@ -1,10 +1,19 @@
 <script setup>
 import { toRef } from 'vue';
 import { useWebStack } from '../../composables/useWebStack';
+
+import ToolingStack from '../stacks/ToolingStack.vue';
 import FrontendStack from '../stacks/FrontendStack.vue';
-import DatabaseStack from '../stacks/DatabaseStack.vue';
+import WebAssemblyStack from '../stacks/WebAssemblyStack.vue';
 import BackendStack from '../stacks/BackendStack.vue';
+import APILayerStack from '../stacks/APILayerStack.vue';
+import AuthProviderStack from '../stacks/AuthProviderStack.vue';
 import CMSStack from '../stacks/CMSStack.vue';
+import MicrofrontendsStack from '../stacks/MicrofrontendsStack.vue';
+import InfrastructureStack from '../stacks/InfrastructureStack.vue';
+import MonitoringStack from '../stacks/MonitoringStack.vue';
+import MessageQueueStack from '../stacks/MessageQueueStack.vue';
+import TestingStack from '../stacks/TestingStack.vue';
 
 const props = defineProps({ lockedItems: { type: Object, required: true } });
 
@@ -24,37 +33,90 @@ defineExpose({ generateStack, getURLParams, restoreFromURL, difficultyItems });
 </script>
 
 <template>
+  <ToolingStack
+    :items="items"
+    :change="change"
+    :locked-items="lockedItems"
+    @lock="$emit('lock', $event)"
+  />
+
+  <FrontendStack
+    :items="items"
+    :change="change"
+    :locked-items="lockedItems"
+    @lock="$emit('lock', $event)"
+  />
+
+  <WebAssemblyStack
+    :items="items"
+    :change="change"
+    :locked-items="lockedItems"
+    @lock="$emit('lock', $event)"
+  />
+
+  <BackendStack
+    :items="items"
+    :change="change"
+    :change-backend-env="changeBackendEnv"
+    :locked-items="lockedItems"
+    @lock="$emit('lock', $event)"
+  />
+
   <div class="stack-row">
-    <FrontendStack
+    <APILayerStack
       :items="items"
       :change="change"
       :locked-items="lockedItems"
       @lock="$emit('lock', $event)"
     />
+    <AuthProviderStack
+      :items="items"
+      :change="change"
+      :locked-items="lockedItems"
+      @lock="$emit('lock', $event)"
+    />
+  </div>
 
-    <div class="stack-backend-container">
-      <BackendStack
-        :items="items"
-        :change="change"
-        :change-backend-env="changeBackendEnv"
-        :locked-items="lockedItems"
-        @lock="$emit('lock', $event)"
-      />
-      <DatabaseStack
-        :items="items"
-        :change="change"
-        :locked-items="lockedItems"
-        @lock="$emit('lock', $event)"
-      />
-    </div>
+  <div class="stack-row">
+    <CMSStack
+      :items="items"
+      :change="change"
+      :locked-items="lockedItems"
+      @lock="$emit('lock', $event)"
+    />
+    <MicrofrontendsStack
+      :items="items"
+      :change="change"
+      :locked-items="lockedItems"
+      @lock="$emit('lock', $event)"
+    />
+  </div>
 
-    <div class="stack-row">
-      <CMSStack
-        :items="items"
-        :change="change"
-        :locked-items="lockedItems"
-        @lock="$emit('lock', $event)"
-      />
-    </div>
+  <InfrastructureStack
+    :items="items"
+    :change="change"
+    :locked-items="lockedItems"
+    @lock="$emit('lock', $event)"
+  />
+
+  <div class="stack-row">
+    <MonitoringStack
+      :items="items"
+      :change="change"
+      :locked-items="lockedItems"
+      @lock="$emit('lock', $event)"
+    />
+    <MessageQueueStack
+      :items="items"
+      :change="change"
+      :locked-items="lockedItems"
+      @lock="$emit('lock', $event)"
+    />
+    <TestingStack
+      :items="items"
+      :change="change"
+      :locked-items="lockedItems"
+      @lock="$emit('lock', $event)"
+    />
   </div>
 </template>
