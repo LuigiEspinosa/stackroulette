@@ -1,6 +1,6 @@
 <script setup>
-import StackItem from '../../components/StackItem.vue';
-import { WASM_TOOLCHAINS } from '../../stacks/web';
+import StackItem from '../../../components/StackItem.vue';
+import { CLOUD_PROVIDERS, CONTAINERS, CICD } from '../../../stacks/web';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,16 +12,26 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'wasmToolchain',
-    title: 'Toolchain',
-    options: WASM_TOOLCHAINS,
+    key: 'cloudProvider',
+    title: 'Cloud Provider',
+    options: CLOUD_PROVIDERS,
+  },
+  {
+    key: 'container',
+    title: 'Containers',
+    options: CONTAINERS,
+  },
+  {
+    key: 'cicd',
+    title: 'CI/CD',
+    options: CICD,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-wasm">
-    <h1>WebAssembly</h1>
+  <section class="stack stack-infra">
+    <h1>Infrastructure</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

@@ -1,6 +1,6 @@
 <script setup>
-import StackItem from '../../components/StackItem.vue';
-import { TESTING_FRAMEWORKS, E2E_FRAMEWORKS } from '../../stacks/web';
+import StackItem from '../../../components/StackItem.vue';
+import { AUTH_PROVIDERS } from '../../../stacks/web';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,21 +12,16 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'testingFramework',
-    title: 'Unit / Integration',
-    options: TESTING_FRAMEWORKS,
-  },
-  {
-    key: 'e2eFramework',
-    title: 'E2E',
-    options: E2E_FRAMEWORKS,
+    key: 'authProvider',
+    title: 'Auth Providers',
+    options: AUTH_PROVIDERS,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-testing">
-    <h1>Testing</h1>
+  <section class="stack stack-auth">
+    <h1>Authentication</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

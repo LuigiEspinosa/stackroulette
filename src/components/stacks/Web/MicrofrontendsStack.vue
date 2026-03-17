@@ -1,6 +1,6 @@
 <script setup>
-import StackItem from '../../components/StackItem.vue';
-import { AUTH_PROVIDERS } from '../../stacks/web';
+import StackItem from '../../../components/StackItem.vue';
+import { MICROFRONTENDS } from '../../../stacks/web';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,16 +12,16 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'authProvider',
-    title: 'Auth Providers',
-    options: AUTH_PROVIDERS,
+    key: 'microfrontend',
+    title: 'MFE Strategy',
+    options: MICROFRONTENDS,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-auth">
-    <h1>Authentication</h1>
+  <section class="stack stack-microfrontend">
+    <h1>Micro-frontends</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

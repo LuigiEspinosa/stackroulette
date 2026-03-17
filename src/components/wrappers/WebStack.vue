@@ -2,18 +2,18 @@
 import { toRef } from 'vue';
 import { useWebStack } from '../../composables/useWebStack';
 
-import ToolingStack from '../stacks/ToolingStack.vue';
-import FrontendStack from '../stacks/FrontendStack.vue';
-import WebAssemblyStack from '../stacks/WebAssemblyStack.vue';
-import BackendStack from '../stacks/BackendStack.vue';
-import APILayerStack from '../stacks/APILayerStack.vue';
-import AuthProviderStack from '../stacks/AuthProviderStack.vue';
-import CMSStack from '../stacks/CMSStack.vue';
-import MicrofrontendsStack from '../stacks/MicrofrontendsStack.vue';
-import InfrastructureStack from '../stacks/InfrastructureStack.vue';
-import MonitoringStack from '../stacks/MonitoringStack.vue';
-import MessageQueueStack from '../stacks/MessageQueueStack.vue';
-import TestingStack from '../stacks/TestingStack.vue';
+import ToolingStack from '../stacks/Web/ToolingStack.vue';
+import FrontendStack from '../stacks/Web/FrontendStack.vue';
+import WebAssemblyStack from '../stacks/Web/WebAssemblyStack.vue';
+import BackendStack from '../stacks/Web/BackendStack.vue';
+import APILayerStack from '../stacks/Web/APILayerStack.vue';
+import AuthProviderStack from '../stacks/Web/AuthProviderStack.vue';
+import CMSStack from '../stacks/Web/CMSStack.vue';
+import MicrofrontendsStack from '../stacks/Web/MicrofrontendsStack.vue';
+import InfrastructureStack from '../stacks/Web/InfrastructureStack.vue';
+import MonitoringStack from '../stacks/Web/MonitoringStack.vue';
+import MessageQueueStack from '../stacks/Web/MessageQueueStack.vue';
+import TestingStack from '../stacks/Web/TestingStack.vue';
 
 const props = defineProps({ lockedItems: { type: Object, required: true } });
 

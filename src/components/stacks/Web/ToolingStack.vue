@@ -1,34 +1,33 @@
 <script setup>
-import StackItem from '../../components/StackItem.vue';
+import StackItem from '../../../components/StackItem.vue';
+import { WEB_BUNDLERS, WEB_PACKAGE_MANAGERS } from '../../../stacks/web';
 
 defineProps({
   items: { type: Object, required: true },
   change: { type: Function, required: true },
   lockedItems: { type: Object, required: true },
-  changeBackendEnv: { type: Function },
 });
 
 defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'backend_environment',
-    title: 'Language/Env',
-    options:
-      "() => { change('backend_environment', BACKEND_ENVIRONMENTS, () => { change('backend_framework', backend_environment.frameworks); }); }",
+    key: 'webBundler',
+    title: 'Bundler',
+    options: WEB_BUNDLERS,
   },
   {
-    key: 'backend_framework',
-    title: 'Framework',
-    options: "change('backend_framework', backend_environment.frameworks)",
+    key: 'packageManager',
+    title: 'Package Manager',
+    options: WEB_PACKAGE_MANAGERS,
   },
 ];
 </script>
 
 <template>
-  <div class="stack-backend-container">
-    <section class="stack stack-backend">
-      <h1>Back-End</h1>
+  <div class="stack-row">
+    <section class="stack stack-tooling">
+      <h1>Tooling</h1>
       <div class="stack-wrapper">
         <StackItem
           v-for="stack in STACK_ITEMS"
@@ -37,7 +36,7 @@ const STACK_ITEMS = [
           :item="items[stack.key]"
           :locked="!!lockedItems[stack.key]"
           @lock="$emit('lock', stack.key)"
-          @dontlike="stack.options"
+          @dontlike="change(stack.key, stack.options)"
         />
       </div>
     </section>

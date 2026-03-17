@@ -1,11 +1,6 @@
 <script setup>
-import StackItem from '../../components/StackItem.vue';
-import {
-  JS_PREPROCESSORS,
-  JS_FRAMEWORKS,
-  CSS_FRAMEWORKS,
-  CSS_PREPROCESSORS,
-} from '../../stacks/web';
+import StackItem from '../../../components/StackItem.vue';
+import { MOBILE_BAAS } from '../../../stacks';
 
 defineProps({
   items: { type: Object, required: true },
@@ -17,31 +12,16 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'jsPreprocessor',
-    title: 'Language/Compiler',
-    options: JS_PREPROCESSORS,
-  },
-  {
-    key: 'jsFramework',
-    title: 'JS Framework',
-    options: JS_FRAMEWORKS,
-  },
-  {
-    key: 'cssPreprocessor',
-    title: 'CSS Preprocessor',
-    options: CSS_PREPROCESSORS,
-  },
-  {
-    key: 'cssFramework',
-    title: 'CSS Framework',
-    options: CSS_FRAMEWORKS,
+    key: 'mobileBaas',
+    title: 'Backend / BaaS',
+    options: MOBILE_BAAS,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-frontend">
-    <h1>Front-End</h1>
+  <section class="stack stack-mobile-baas">
+    <h1>Backend &amp; Services</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

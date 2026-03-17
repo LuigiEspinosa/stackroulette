@@ -6,14 +6,17 @@ import confetti from 'canvas-confetti';
 import { MAINSTREAM } from '../stacks/mainstream';
 
 import WebStack from '../components/wrappers/WebStack.vue';
+import MobileStack from '../components/wrappers/MobileStack.vue';
 
 // Registry: Adding a new stack type
 const STACK_TYPES = {
   web: WebStack,
+  mobile: MobileStack,
 };
 
 const STACK_META = {
   web: { label: '🌐 Web App Stack', badgeClass: 'badge-web' },
+  mobile: { label: '📱 Mobile App Stack', badgeClass: 'badge-mobile' },
 };
 
 const router = useRouter();
@@ -163,9 +166,11 @@ onMounted(async () => {
 
 $stack-title-color: rgb(108, 190, 255);
 $stack-border-color: rgb(108, 190, 255);
+$mobile-title-color: rgb(134, 108, 255);
+$mobile-border-color: rgb(134, 108, 255);
 
 #result {
-  transform: scale(0.9);
+  margin-top: 4rem;
 }
 
 .stack-type-badge {
@@ -188,6 +193,12 @@ $stack-border-color: rgb(108, 190, 255);
     background-color: $stack-title-color;
     color: color.adjust($stack-title-color, $lightness: -40%);
     border: 1px solid $stack-border-color;
+  }
+
+  .badge-mobile {
+    background-color: $mobile-title-color;
+    color: color.adjust($mobile-title-color, $lightness: -40%);
+    border: 1px solid $mobile-border-color;
   }
 }
 

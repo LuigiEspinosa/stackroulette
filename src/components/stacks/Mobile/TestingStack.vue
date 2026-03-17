@@ -1,6 +1,6 @@
 <script setup>
-import StackItem from '../../components/StackItem.vue';
-import { API_LAYERS } from '../../stacks/web';
+import StackItem from '../../../components/StackItem.vue';
+import { MOBILE_TESTING } from '../../../stacks';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,16 +12,16 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'apiLayer',
-    title: 'API Layer',
-    options: API_LAYERS,
+    key: 'mobileTesting',
+    title: 'Testing',
+    options: MOBILE_TESTING,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-api">
-    <h1>API Layer</h1>
+  <section class="stack stack-mobile-testing">
+    <h1>Testing</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

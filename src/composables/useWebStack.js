@@ -1,3 +1,4 @@
+import { computed } from 'vue';
 import { useStack } from './useStack';
 import {
   JS_FRAMEWORKS,
@@ -21,7 +22,6 @@ import {
   WEB_BUNDLERS,
   WEB_PACKAGE_MANAGERS,
 } from '../stacks/web';
-import { computed } from 'vue';
 
 const URL_KEYS = [
   ['jsFramework', 'jf', JS_FRAMEWORKS],

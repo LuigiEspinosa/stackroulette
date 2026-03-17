@@ -1,6 +1,6 @@
 <script setup>
-import StackItem from '../../components/StackItem.vue';
-import { MESSAGE_QUEUES } from '../../stacks/web';
+import StackItem from '../../../components/StackItem.vue';
+import { CMS } from '../../../stacks/web';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,16 +12,16 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'messageQueue',
-    title: 'Messaging',
-    options: MESSAGE_QUEUES,
+    key: 'cms',
+    title: 'CMS',
+    options: CMS,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-queue">
-    <h1>Messaging</h1>
+  <section class="stack stack-cms">
+    <h1>CMS</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"
