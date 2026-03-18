@@ -7,16 +7,19 @@ import { MAINSTREAM } from '../stacks/mainstream';
 
 import WebStack from '../components/wrappers/WebStack.vue';
 import MobileStack from '../components/wrappers/MobileStack.vue';
+import DesktopStack from '../components/wrappers/DesktopStack.vue';
 
 // Registry: Adding a new stack type
 const STACK_TYPES = {
   web: WebStack,
   mobile: MobileStack,
+  desktop: DesktopStack,
 };
 
 const STACK_META = {
   web: { label: '🌐 Web App Stack', badgeClass: 'badge-web' },
   mobile: { label: '📱 Mobile App Stack', badgeClass: 'badge-mobile' },
+  desktop: { label: '🖥️ Desktop App Stack', badgeClass: 'badge-desktop' },
 };
 
 const router = useRouter();
@@ -164,10 +167,9 @@ onMounted(async () => {
 <style lang="scss">
 @use 'sass:color';
 
-$stack-title-color: rgb(108, 190, 255);
-$stack-border-color: rgb(108, 190, 255);
-$mobile-title-color: rgb(134, 108, 255);
-$mobile-border-color: rgb(134, 108, 255);
+$stack-color: rgb(108, 190, 255);
+$mobile-color: rgb(134, 108, 255);
+$desktop-color: rgb(52, 168, 120);
 
 #result {
   margin-top: 4rem;
@@ -190,15 +192,21 @@ $mobile-border-color: rgb(134, 108, 255);
   }
 
   .badge-web {
-    background-color: $stack-title-color;
-    color: color.adjust($stack-title-color, $lightness: -40%);
-    border: 1px solid $stack-border-color;
+    background-color: $stack-color;
+    color: color.adjust($stack-color, $lightness: -40%);
+    border: 1px solid $stack-color;
   }
 
   .badge-mobile {
-    background-color: $mobile-title-color;
-    color: color.adjust($mobile-title-color, $lightness: -40%);
-    border: 1px solid $mobile-border-color;
+    background-color: $mobile-color;
+    color: color.adjust($mobile-color, $lightness: -40%);
+    border: 1px solid $mobile-color;
+  }
+
+  .badge-desktop {
+    background-color: $desktop-color;
+    color: color.adjust($desktop-color, $lightness: -40%);
+    border: 1px solid $desktop-color;
   }
 }
 
