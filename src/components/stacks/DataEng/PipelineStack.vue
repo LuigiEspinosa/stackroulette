@@ -1,6 +1,10 @@
 <script setup>
 import StackItem from '../../../components/StackItem.vue';
-import { AI_VECTOR_DBS } from '../../../stacks';
+import {
+  DATA_INGESTION,
+  DATA_TRANSFORMATION,
+  DATA_WAREHOUSE,
+} from '../../../stacks';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,16 +16,26 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'aiVectorDb',
-    title: 'Vector DB',
-    options: AI_VECTOR_DBS,
+    key: 'dataIngestion',
+    title: 'Ingestion',
+    options: DATA_INGESTION,
+  },
+  {
+    key: 'dataTransformation',
+    title: 'Transformation',
+    options: DATA_TRANSFORMATION,
+  },
+  {
+    key: 'dataWarehouse',
+    title: 'Warehouse / Lake',
+    options: DATA_WAREHOUSE,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-ai-deployment">
-    <h1>Deployment</h1>
+  <section class="stack stack-pipeline">
+    <h1>Ingest -> Transform -> Store</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

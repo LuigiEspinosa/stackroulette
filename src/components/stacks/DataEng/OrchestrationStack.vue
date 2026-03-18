@@ -1,6 +1,6 @@
 <script setup>
 import StackItem from '../../../components/StackItem.vue';
-import { AI_VECTOR_DBS } from '../../../stacks';
+import { DATA_ORCHESTRATION } from '../../../stacks';
 
 defineProps({
   items: { type: Object, required: true },
@@ -12,16 +12,16 @@ defineEmits(['lock']);
 
 const STACK_ITEMS = [
   {
-    key: 'aiVectorDb',
-    title: 'Vector DB',
-    options: AI_VECTOR_DBS,
+    key: 'dataOrchestration',
+    title: 'Orchestation',
+    options: DATA_ORCHESTRATION,
   },
 ];
 </script>
 
 <template>
-  <section class="stack stack-ai-deployment">
-    <h1>Deployment</h1>
+  <section class="stack stack-orch">
+    <h1>Orchestration</h1>
     <div class="stack-wrapper">
       <StackItem
         v-for="stack in STACK_ITEMS"

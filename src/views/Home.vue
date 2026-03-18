@@ -10,6 +10,7 @@ import MobileStack from '../components/wrappers/MobileStack.vue';
 import DesktopStack from '../components/wrappers/DesktopStack.vue';
 import GameDevStack from '../components/wrappers/GameDevStack.vue';
 import AiMlStack from '../components/wrappers/AiMlStack.vue';
+import DataEngStack from '../components/wrappers/DataEngStack.vue';
 
 // Registry: Adding a new stack type
 const STACK_TYPES = {
@@ -18,6 +19,7 @@ const STACK_TYPES = {
   desktop: DesktopStack,
   gamedev: GameDevStack,
   aiml: AiMlStack,
+  dataeng: DataEngStack,
 };
 
 const STACK_META = {
@@ -26,6 +28,7 @@ const STACK_META = {
   desktop: { label: '🖥️ Desktop App Stack', badgeClass: 'badge-desktop' },
   gamedev: { label: '🎮 Game Dev Stack', badgeClass: 'badge-gamedev' },
   aiml: { label: '🤖 AI / ML Stack', badgeClass: 'badge-aiml' },
+  dataeng: { label: '📊 Data Engineering Stack', badgeClass: 'badge-dataeng' },
 };
 
 const router = useRouter();
@@ -178,6 +181,7 @@ $mobile-color: rgb(134, 108, 255);
 $desktop-color: rgb(52, 168, 120);
 $gamedev-color: rgb(234, 130, 20);
 $aiml-color: rgb(139, 92, 246);
+$dataeng-color: rgb(20, 184, 166);
 
 #result {
   margin-top: 4rem;
@@ -227,6 +231,12 @@ $aiml-color: rgb(139, 92, 246);
     background-color: $aiml-color;
     color: color.adjust($aiml-color, $lightness: -40%);
     border: 1px solid $aiml-color;
+  }
+
+  .badge-dataeng {
+    background-color: $dataeng-color;
+    color: color.adjust($dataeng-color, $lightness: -40%);
+    border: 1px solid $dataeng-color;
   }
 }
 

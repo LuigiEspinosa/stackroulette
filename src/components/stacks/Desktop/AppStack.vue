@@ -7,7 +7,7 @@ defineProps({
   change: { type: Function, required: true },
   lockedItems: { type: Object, required: true },
   changeDesktopLanguage: { type: Function },
-  compatibleFrameworks: { type: Function },
+  compatibleFrameworks: { type: Array },
 });
 
 defineEmits(['lock']);
