@@ -32,6 +32,7 @@ const STACK_META = {
   aiml: { label: '🤖 AI / ML Stack', badgeClass: 'badge-aiml' },
   dataeng: { label: '📊 Data Engineering Stack', badgeClass: 'badge-dataeng' },
   embedded: { label: '🔌 Embedded / IoT Stack', badgeClass: 'badge-embedded' },
+  cli: { label: '⌨️ CLI Tool Stack', badgeClass: 'badge-embedded' },
 };
 
 const router = useRouter();
@@ -186,6 +187,7 @@ $gamedev-color: rgb(234, 130, 20);
 $aiml-color: rgb(139, 92, 246);
 $dataeng-color: rgb(20, 184, 166);
 $embedded-color: rgb(220, 80, 60);
+$cli-color: rgb(100, 116, 139);
 
 #result {
   margin-top: 4rem;
@@ -247,6 +249,12 @@ $embedded-color: rgb(220, 80, 60);
     background-color: $embedded-color;
     color: color.adjust($embedded-color, $lightness: -40%);
     border: 1px solid $embedded-color;
+  }
+
+  .badge-cli {
+    background-color: $cli-color;
+    color: color.adjust($cli-color, $lightness: -40%);
+    border: 1px solid $cli-color;
   }
 }
 
