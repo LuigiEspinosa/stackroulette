@@ -5,3 +5,5 @@ export * from './gamdev.js';
 export * from './aiml.js';
 export * from './dataeng.js';
 export * from './embedded.js';
+export * from './cli.js';
+export * from './web3.js';

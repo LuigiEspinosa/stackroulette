@@ -12,6 +12,8 @@ import GameDevStack from '../components/wrappers/GameDevStack.vue';
 import AiMlStack from '../components/wrappers/AiMlStack.vue';
 import DataEngStack from '../components/wrappers/DataEngStack.vue';
 import EmbeddedStack from '../components/wrappers/EmbeddedStack.vue';
+import CliStack from '../components/wrappers/CliStack.vue';
+import Web3Stack from '../components/wrappers/Web3Stack.vue';
 
 // Registry: Adding a new stack type
 const STACK_TYPES = {
@@ -22,6 +24,8 @@ const STACK_TYPES = {
   aiml: AiMlStack,
   dataeng: DataEngStack,
   embedded: EmbeddedStack,
+  cli: CliStack,
+  web3: Web3Stack,
 };
 
 const STACK_META = {
@@ -33,6 +37,7 @@ const STACK_META = {
   dataeng: { label: '📊 Data Engineering Stack', badgeClass: 'badge-dataeng' },
   embedded: { label: '🔌 Embedded / IoT Stack', badgeClass: 'badge-embedded' },
   cli: { label: '⌨️ CLI Tool Stack', badgeClass: 'badge-embedded' },
+  web3: { label: '⛓️ Blockchain / Web3 Stack', badgeClass: 'badge-web3' },
 };
 
 const router = useRouter();
@@ -188,6 +193,7 @@ $aiml-color: rgb(139, 92, 246);
 $dataeng-color: rgb(20, 184, 166);
 $embedded-color: rgb(220, 80, 60);
 $cli-color: rgb(100, 116, 139);
+$web3-color: rgb(6, 182, 212);
 
 #result {
   margin-top: 4rem;
@@ -255,6 +261,12 @@ $cli-color: rgb(100, 116, 139);
     background-color: $cli-color;
     color: color.adjust($cli-color, $lightness: -40%);
     border: 1px solid $cli-color;
+  }
+
+  .badge-web3 {
+    background-color: $web3-color;
+    color: color.adjust($web3-color, $lightness: -40%);
+    border: 1px solid $web3-color;
   }
 }
 
